@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>GAME-NHOM3</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="shortcut icon" href="images/logo.png" />
+	<style>
+		body {
+			background-color: grey;
+		}
+
+		h1 {
+			color: yellow;
+			font-variant: small-caps;
+		}
+
+		h4 {
+			color: white;
+		}
+
+		body {
+			background-color: grey;
+			background-image: url("images/pubg3.jpg");
+		}
+
+		i {
+			color: white
+		}
+
+		.form-control {
+			height: 40px;
+		}
+	</style>
+</head>
+
+<body>
+	<form action="login.html" method="post" name="frm" class="form-all">
+		<fieldset>
+			<legend>
+				<br /><br />
+				<div>
+					<h1>REGISTER NOW</h1>
+				</div>
+				<br />
+			</legend>
+			<div class="form-group">
+				<label for="user">
+					<h4>Username:</h4>
+				</label>
+				<input type="text" name="txtten" class="form-control" id="user" placeholder="Nhập username">
+			</div>
+			<div class="form-group">
+				<label for="pwd">
+					<h4>Password:</h4>
+				</label>
+				<input type="password" name="txtpass" class="form-control" id="pwd" placeholder="Nhập password">
+			</div>
+			<div class="form-group">
+				<label for="pwd">
+					<h4>Confirm password:</h4>
+				</label>
+				<input type="password" name="txtxnpass" class="form-control" id="pwd" placeholder="Nhập lại password">
+			</div>
+			<div class="form-group">
+				<label for="email">
+					<h4>Email address:</h4>
+				</label>
+				<input type="email" name="txtemail" class="form-control" id="email" placeholder="Nhập email">
+			</div>
+			<div class="form-group">
+				<div><label>
+						<h4>National</h4>
+					</label></div>
+				<select class="from-control" id="txtNational" name="txtNational">
+					<option value="English">English</option>
+					<option value="VietNam">Việt Nam</option>
+					<option value="Australia">Australia</option>
+					<option value="Thailand">Thailand</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label>
+					<h4>Sex</h4>
+				</label><br />
+				<label>
+					<i>
+						<input name="txtgioitinh" type="radio" value="MALE" />MALE
+					</i>
+				</label>
+				<label>
+					<i>
+						<input name="txtgioitinh" type="radio" value="FEMALE" />FEMALE
+					</i>
+				</label>
+			</div>
+			<button type="button" class="btn btn-default" onclick="xacnhan();">REGISTER</button>
+			<div class="container">
+				<h2>Sắp hoàn tất</h2>
+				<p><i>hãy đăng kí ngay hôm nay số lượng có hạn(còn 596 người) nhận ưu đãi đặc biệt từ shop</i></p>
+				<div class="progress">
+					<div class="progress-bar progress-bar-striped progress-bar-animated" style="width:40%"></div>
+				</div>
+			</div>
+		</fieldset>
+	</form>
+	<script language="JavaScript">
+		function xacnhan() {
+			var ten = document.frm.txtten.value;
+			var pass = document.frm.txtpass.value;
+			var confpass = document.frm.txtxnpass.value;
+			var email = document.frm.txtemail.value;
+			var national = document.frm.txtNational.value;
+			var gioitinh = document.frm.txtgioitinh.value;
+			var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+			if (ten == "") {
+				alert("Hãy nhập tên");
+				document.frm.txtten.value.focus();
+				return false;
+			}
+			if (pass == "") {
+				alert("Hãy nhập password");
+				document.frm.txtpass.value.focus();
+				return false;
+			}
+			if (confpass == "") {
+				alert("Hãy xác nhận password");
+				document.frm.txtxnpass.value.focus();
+				return false;
+			}
+			if (pass == confpass) {
+
+			}
+			else {
+				alert("mật khẩu không khớp");
+				return false;
+				document.frm.txtxnpass.value.focus();
+			}
+			if (email == "") {
+				alert("Hãy nhập email");
+				document.frm.txtemail.value.focus();
+				return false;
+			}
+			if (!filter.test((document.frm.txtemail.value))) {
+				alert('Please enter a valid email address.\nExample @gmail.com ');
+				document.frm.txtemail.focus();
+				return;
+			}
+
+			alert("Đăng kí thành công\nUsername: " + ten + "\nEmail: " + email + "\nNational: " + national + "\nGiới Tính: " + gioitinh);
+			window.location.replace("login.html");
+		}
+	</script>
+</body>
+
+</html>

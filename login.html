@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>PUBG-Shop.fpoly</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="shortcut icon" href="images/logo.png" />
+	<style>
+		body {
+			background-color: grey;
+			background-image: url("images/pubg.png");
+		}
+
+		b {
+			color: red;
+		}
+
+		.form-control {
+			height: 40px;
+		}
+
+		h1 {
+			color: black;
+		}
+	</style>
+</head>
+
+<body>
+	<form action="back.html" method="post" name="frm" class="form-all">
+		<fieldset>
+			<legend>
+				<br /><br />
+				<div>
+					<h1>LOGIN NOW</h1>
+				</div>
+				<br />
+			</legend>
+			<div class="form-group">
+				<label for="user">
+					<h4>Username:</h4>
+				</label>
+				<input type="text" name="txtten" class="form-control" id="user" placeholder="Nhập username">
+			</div>
+			<div class="form-group">
+				<label for="pwd">
+					<h4>Password:</h4>
+				</label>
+				<input type="password" name="txtpass" class="form-control" id="pwd" placeholder="Nhập password">
+			</div>
+			<button type="button" class="btn btn-default" onclick="xacnhan();">LOGIN</button>
+			<div class="container" align="center">
+				<h2>Sắp hoàn tất</h2>
+				<p><b>hãy nhập user và password để vào cộng đồng PUBG.COM</b></p>
+				<div class="progress">
+					<div class="progress-bar progress-bar-striped progress-bar-animated" style="width:40%"></div>
+				</div>
+			</div>
+		</fieldset>
+	</form>
+	<script language="JavaScript">
+		function xacnhan() {
+			var ten = document.frm.txtten.value;
+			var pass = document.frm.txtpass.value;
+
+			if (ten == "") {
+				alert("Hãy nhập tên");
+				document.frm.txtten.value.focus();
+				return false;
+			}
+			if (pass == "") {
+				alert("Hãy nhập password");
+				document.frm.txtpass.value.focus();
+				return false;
+			}
+			alert("Đăng nhập thành công\n Xin chào: " + ten)
+			window.location.replace("back.html");
+		}
+
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<title>GAME-NHOM3</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="shortcut icon" href="images/logo.png" />
+	<link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+	<style>
+		.navbar {
+			margin-bottom: 20px;
+			border-radius: 10px;
+
+		}
+
+		.row.content {
+			height: 450px;
+		}
+
+		.sidenav {
+			padding-top: 50px;
+			background-color: rgba(red, green, blue, alpha);
+			height: 100%;
+		}
+
+		img {
+			width: 1000px;
+			height: 600px;
+		}
+
+		@media screen and (max-width: 767px) {
+			.sidenav {
+				height: auto;
+				padding: 15px;
+			}
+
+			.row.content {
+				height: auto;
+			}
+		}
+
+		body {
+			background-color: black;
+		}
+
+		.input-group {
+			margin-top: 7px;
+			margin-right: 350px;
+			width: 350px;
+		}
+
+		::-webkit-scrollbar {
+			width: 0px;
+			height: 0px;
+		}
+
+		::-webkit-scrollbar-track {
+			-webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
+			background: #fff;
+		}
+
+		::-webkit-scrollbar-thumb {
+			background: rgba(186, 35, 35, 0.8);
+			-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+		}
+
+		::-webkit-scrollbar-thumb:window-inactive {
+			background: rgba(186, 35, 35, 0.4);
+			-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+		}
+	</style>
+
+</head>
+
+<body>
+	<center>
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="index.html">GAME NHÓM 3</a>
+				</div>
+				<ul class="nav navbar-nav">
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">Danh Mục Game <span
+								class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="lol.html" target="page">Liên Minh Huyền Thoại</a></li>
+							<hr />
+							<li><a href="lienquan.html" target="page">Liên Quân Mobile</a></li>
+							<hr />
+							<li><a href="freefire.html" target="page">Free Fire</a></li>
+						</ul>
+					</li>
+					<li><a href="home.html" target="page">Trang Chủ</a></li>
+					<li><a href="https://www.facebook.com/ad2.khv" target="_blank">Thu Mua Acc </a></li>
+					<li><a href="gioithieu1.html" target="page">Giới thiệu</a></li>
+					<li><a href="https://www.facebook.com/ad2.khv" target="_blank">Cộng Đồng</a></li>
+					<li><a href="https://www.facebook.com/ad2.khv" target="_blank">Liên Hệ</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+					<li><a href="formdagki.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+				</ul>
+				<div class="input-group">
+					<input type="text" class="form-control" placeholder="Nhập trang phục, skin... bạn muốn tìm"
+						name="search">
+					<div class="input-group-btn">
+						<button class="btn btn-default" type="submit">
+							<i class="glyphicon glyphicon-search"></i>
+						</button>
+					</div>
+				</div>
+				</form>
+			</div>
+		</nav>
+	</center>
+	<style>
+		iframe[name=page] {
+			position: absolute;
+			top: 50px;
+			min-width: 100%;
+			min-height: 800px;
+			overflow: scroll;
+		}
+	</style>
+	<article>
+		<iframe name="page" src="home.html" frameborder="0" class="page" scrolling="auto"> </iframe>
+	</article>
+
+</body>
+
+</html>
